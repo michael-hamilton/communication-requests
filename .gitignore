@@ -1,0 +1,13 @@
+#OS/IDE Files
+.idea/
+
+#Package Manager Folders
+bower_components
+node_modules
+
+#Log Files
+*.log
+
+#Other Folders/Files
+data/*
+uploads/
