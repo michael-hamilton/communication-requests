@@ -1,0 +1,16 @@
+table(class="table-stripe")
+    thead
+        tr
+            th Name
+            th Email Address
+            th Submitted
+            th
+            th
+    tbody
+        each request in requests
+            tr
+                td= request.user.name
+                td= request.user.email_address
+                td= moment(new Date(request.submitted)).fromNow()
+                td: a(href="/admin/requests/#{request._id}") View
+                td: a(href="/admin/requests/delete/#{request._id}" onclick="return confirm('Delete this request?')") Delete

@@ -6,7 +6,7 @@ module.exports = {
         res.render('requests', { title: 'Communication Requests' });
     },
 
-    //Validates inputs from form submission
+    //Validates inputs from form submission.  Checks all checkbox inputs and converts their values to true or false
     validateInputs: function(req, res, next) {
         next();
     },

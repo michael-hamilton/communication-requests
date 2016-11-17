@@ -20,6 +20,7 @@ else {
 }
 
 var requests = require('./controllers/requests');
+var admin = require('./controllers/admin');
 
 var app = express();
 
@@ -42,7 +43,10 @@ app.use(require('node-sass-middleware')({
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/bower_components',  express.static(__dirname + '/bower_components'));
 
+app.locals.moment = require('moment');
+
 app.use('/', requests);
+app.use('/admin', admin);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
