@@ -1,4 +1,4 @@
-form
+form(action="/" method="post")
     div(class="row")
         div(class="col medium col-12")
 
@@ -6,11 +6,11 @@ form
 
             div(class="form-row")
                 label Name
-                input(class="form-input" type="text" placeholder="Name")
+                input(class="form-input" type="text" placeholder="Name" name="name")
 
             div(class="form-row")
                 label Email Address
-                input(class="form-input" type="text" placeholder="Email Address")
+                input(class="form-input" type="text" placeholder="Email Address" name="email_address")
 
     hr
 
@@ -22,30 +22,30 @@ form
             div(class="form-row")
                 div(class="checkbox")
                     label
-                        input(type="checkbox" onclick="$('#event-details').fadeToggle();")
+                        input(type="checkbox" onclick="$('#event-details').fadeToggle();" name="event[is_event]")
                         | &nbsp; Is this an event?
 
             div(id="event-details" class="col medium col-4" style="display:none;")
 
                 div(class="form-row")
                     label Event Title
-                    input(class="form-input" type="text" placeholder="Event Title")
+                    input(class="form-input" type="text" placeholder="Event Title" name="event[title]")
 
                 div(class="form-row")
                     label Event Date
-                    input(class="form-input" type="text" placeholder="Event Date")
+                    input(class="form-input" type="text" placeholder="Event Date" name="event[date]")
 
                 div(class="form-row")
                     label Event Time(s)
-                    input(class="form-input" type="text" placeholder="Event Time(s)")
+                    input(class="form-input" type="text" placeholder="Event Time(s)" name="event[times]")
 
                 div(class="form-row")
                     label Event Location
-                    input(class="form-input" type="text" placeholder="Event Location")
+                    input(class="form-input" type="text" placeholder="Event Location" name="event[location]")
 
                 div(class="form-row")
                     label Special Requests
-                    textarea(class="form-input" placeholder="Special Requests")
+                    textarea(class="form-input" placeholder="Special Requests" name="event[special_requests]")
 
 
     hr
@@ -60,64 +60,64 @@ form
                     div(class="form-row")
                         div(class="checkbox")
                             label
-                                input(type="checkbox")
+                                input(type="checkbox" name="mediums[app]")
                                 | &nbsp; App
 
                     div(class="form-row")
                         div(class="checkbox")
                             label
-                                input(type="checkbox")
+                                input(type="checkbox" name="mediums[announcements]")
                                 | &nbsp; Announcements
 
                     div(class="form-row")
                         div(class="checkbox")
                             label
-                                input(type="checkbox")
+                                input(type="checkbox" name="mediums[before_mass_slides]")
                                 | &nbsp; Before Mass Slides
 
                 div(class="col medium col-3")
                     div(class="form-row")
                         div(class="checkbox")
                             label
-                                input(type="checkbox")
+                                input(type="checkbox" name="mediums[endnotes]")
                                 | &nbsp; Endnotes
 
                     div(class="form-row")
                         div(class="checkbox")
                             label
-                                input(type="checkbox")
+                                input(type="checkbox" name="mediums[online_campus]")
                                 | &nbsp; Online Campus
 
                     div(class="form-row")
                         div(class="checkbox")
                             label
-                                input(type="checkbox")
+                                input(type="checkbox" name="mediums[website]")
                                 | &nbsp; Website
 
                 div(class="col medium col-3")
                     div(class="form-row")
                         div(class="checkbox")
                             label
-                                input(type="checkbox")
+                                input(type="checkbox" name="mediums[worship_fully]")
                                 | &nbsp; Worship Fully
 
                 div(class="col medium col-3")
                     div(class="form-row")
                         div(class="checkbox")
                             label
-                                input(type="checkbox")
+                                input(type="checkbox" name="mediums[facebook]")
                                 | &nbsp; Facebook
 
                     div(class="form-row")
                         div(class="checkbox")
                             label
-                                input(type="checkbox")
+                                input(type="checkbox" name="mediums[instagram]")
                                 | &nbsp; Instagram
 
                     div(class="form-row")
                         div(class="checkbox")
                             label
-                                input(type="checkbox")
+                                input(type="checkbox" name="mediums[twitter]")
                                 | &nbsp; Twitter
 
     hr
@@ -132,25 +132,25 @@ form
             div(class="form-row")
                 div(class="checkbox")
                     label
-                        input(type="checkbox")
+                        input(type="checkbox" name="series[id][date-1]")
                         | &nbsp; Date 1
 
             div(class="form-row")
                 div(class="checkbox")
                     label
-                        input(type="checkbox")
+                        input(type="checkbox" name="series[id][date-2]")
                         | &nbsp; Date 2
 
             div(class="form-row")
                 div(class="checkbox")
                     label
-                        input(type="checkbox")
+                        input(type="checkbox" name="series[id][date-3]")
                         | &nbsp; Date 3
 
             div(class="form-row")
                 div(class="checkbox")
                     label
-                        input(type="checkbox")
+                        input(type="checkbox" name="series[id][date-4]")
                         | &nbsp; Date 4
 
     hr
@@ -162,15 +162,15 @@ form
 
             div(class="form-row")
                 label What are you calling this?
-                input(class="form-input" type="text")
+                input(class="form-input" type="text" placeholder="Title" name="details[title]")
 
             div(class="form-row")
                 label Who is your target audience?
-                input(class="form-input" type="text")
+                input(class="form-input" type="text" placeholder="Target Audience" name="details[target]")
 
             div(class="form-row")
-                label What are you calling this?
-                textarea(class="form-input" rows="10")
+                label Any other details we need to know?
+                textarea(class="form-input" rows="10" placeholder="Other Details" name="details[details]")
 
     div(class="row")
         div(class="col medium col-12")
