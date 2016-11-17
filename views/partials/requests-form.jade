@@ -6,11 +6,11 @@ form(action="/" method="post")
 
             div(class="form-row")
                 label Name
-                input(class="form-input" type="text" placeholder="Name" name="name")
+                input(class="form-input" type="text" placeholder="Name" name="user[name]")
 
             div(class="form-row")
                 label Email Address
-                input(class="form-input" type="text" placeholder="Email Address" name="email_address")
+                input(class="form-input" type="text" placeholder="Email Address" name="user[email_address]")
 
     hr
 
@@ -132,25 +132,25 @@ form(action="/" method="post")
             div(class="form-row")
                 div(class="checkbox")
                     label
-                        input(type="checkbox" name="series[id][date-1]")
+                        input(type="checkbox" name="dates[series-id][date-1]")
                         | &nbsp; Date 1
 
             div(class="form-row")
                 div(class="checkbox")
                     label
-                        input(type="checkbox" name="series[id][date-2]")
+                        input(type="checkbox" name="dates[series-id][date-2]")
                         | &nbsp; Date 2
 
             div(class="form-row")
                 div(class="checkbox")
                     label
-                        input(type="checkbox" name="series[id][date-3]")
+                        input(type="checkbox" name="dates[series-id][date-3]")
                         | &nbsp; Date 3
 
             div(class="form-row")
                 div(class="checkbox")
                     label
-                        input(type="checkbox" name="series[id][date-4]")
+                        input(type="checkbox" name="dates[series-id][date-4]")
                         | &nbsp; Date 4
 
     hr

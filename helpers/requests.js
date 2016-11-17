@@ -1,16 +1,27 @@
+var Request = require('../models/request');
+
 module.exports = {
     //Renders request form
     render: function(req, res, next) {
         res.render('requests', { title: 'Communication Requests' });
     },
 
-    //Validates inputs from from submission
+    //Validates inputs from form submission
     validateInputs: function(req, res, next) {
         next();
     },
 
     //Saves submission data to database
     save: function(req, res, next) {
-        next();
+        new Request({
+            user: req.body.user,
+            event: req.body.event,
+            mediums: req.body.mediums,
+            dates: req.body.dates,
+            details: req.body.details
+        }).save(function(err, request) {
+            if(err) new Error("Error saving request");
+            next();
+        });
     }
 };
