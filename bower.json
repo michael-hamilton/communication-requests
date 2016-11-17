@@ -1,0 +1,22 @@
+{
+  "name": "communication-requests",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Michael Hamilton <michaelhamilton626@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/michael-hamilton/communication-requests",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "^3.1.1",
+    "Quartz": "quartz-framework#^0.4.0"
+  }
+}

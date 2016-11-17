@@ -1,3 +1,9 @@
+/* Communication Requests App
+ * Copyright 2016 Church of the Nativity
+ * Michael Hamilton
+ * MIT Licensed
+ */
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -5,7 +11,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var index = require('./controllers/index');
+var requests = require('./controllers/requests');
 
 var app = express();
 
@@ -28,7 +34,7 @@ app.use(require('node-sass-middleware')({
 app.use(express.static(path.join(__dirname, 'public')));
 app.use('/bower_components',  express.static(__dirname + '/bower_components'));
 
-app.use('/', index);
+app.use('/', requests);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

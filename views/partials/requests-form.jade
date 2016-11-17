@@ -1,0 +1,179 @@
+form
+    div(class="row")
+        div(class="col medium col-12")
+
+            h4 Who are you?
+
+            div(class="form-row")
+                label Name
+                input(class="form-input" type="text" placeholder="Name")
+
+            div(class="form-row")
+                label Email Address
+                input(class="form-input" type="text" placeholder="Email Address")
+
+    hr
+
+    div(class="row")
+        div(class="col medium col-12")
+
+            h4 Event details
+
+            div(class="form-row")
+                div(class="checkbox")
+                    label
+                        input(type="checkbox" onclick="$('#event-details').fadeToggle();")
+                        | &nbsp; Is this an event?
+
+            div(id="event-details" class="col medium col-4" style="display:none;")
+
+                div(class="form-row")
+                    label Event Title
+                    input(class="form-input" type="text" placeholder="Event Title")
+
+                div(class="form-row")
+                    label Event Date
+                    input(class="form-input" type="text" placeholder="Event Date")
+
+                div(class="form-row")
+                    label Event Time(s)
+                    input(class="form-input" type="text" placeholder="Event Time(s)")
+
+                div(class="form-row")
+                    label Event Location
+                    input(class="form-input" type="text" placeholder="Event Location")
+
+                div(class="form-row")
+                    label Special Requests
+                    textarea(class="form-input" placeholder="Special Requests")
+
+
+    hr
+
+    div(class="row")
+        div(class="col medium col-12")
+
+            h4 What mediums would you like this communicated?
+
+            div(class="row")
+                div(class="col medium col-3")
+                    div(class="form-row")
+                        div(class="checkbox")
+                            label
+                                input(type="checkbox")
+                                | &nbsp; App
+
+                    div(class="form-row")
+                        div(class="checkbox")
+                            label
+                                input(type="checkbox")
+                                | &nbsp; Announcements
+
+                    div(class="form-row")
+                        div(class="checkbox")
+                            label
+                                input(type="checkbox")
+                                | &nbsp; Before Mass Slides
+
+                div(class="col medium col-3")
+                    div(class="form-row")
+                        div(class="checkbox")
+                            label
+                                input(type="checkbox")
+                                | &nbsp; Endnotes
+
+                    div(class="form-row")
+                        div(class="checkbox")
+                            label
+                                input(type="checkbox")
+                                | &nbsp; Online Campus
+
+                    div(class="form-row")
+                        div(class="checkbox")
+                            label
+                                input(type="checkbox")
+                                | &nbsp; Website
+
+                div(class="col medium col-3")
+                    div(class="form-row")
+                        div(class="checkbox")
+                            label
+                                input(type="checkbox")
+                                | &nbsp; Worship Fully
+
+                div(class="col medium col-3")
+                    div(class="form-row")
+                        div(class="checkbox")
+                            label
+                                input(type="checkbox")
+                                | &nbsp; Facebook
+
+                    div(class="form-row")
+                        div(class="checkbox")
+                            label
+                                input(type="checkbox")
+                                | &nbsp; Instagram
+
+                    div(class="form-row")
+                        div(class="checkbox")
+                            label
+                                input(type="checkbox")
+                                | &nbsp; Twitter
+
+    hr
+
+    div(class="row")
+        div(class="col medium col-12")
+
+            h4 What dates?
+
+            h4: small Series Title
+
+            div(class="form-row")
+                div(class="checkbox")
+                    label
+                        input(type="checkbox")
+                        | &nbsp; Date 1
+
+            div(class="form-row")
+                div(class="checkbox")
+                    label
+                        input(type="checkbox")
+                        | &nbsp; Date 2
+
+            div(class="form-row")
+                div(class="checkbox")
+                    label
+                        input(type="checkbox")
+                        | &nbsp; Date 3
+
+            div(class="form-row")
+                div(class="checkbox")
+                    label
+                        input(type="checkbox")
+                        | &nbsp; Date 4
+
+    hr
+
+    div(class="row")
+        div(class="col medium col-12")
+
+            h4 Who and what?
+
+            div(class="form-row")
+                label What are you calling this?
+                input(class="form-input" type="text")
+
+            div(class="form-row")
+                label Who is your target audience?
+                input(class="form-input" type="text")
+
+            div(class="form-row")
+                label What are you calling this?
+                textarea(class="form-input" rows="10")
+
+    div(class="row")
+        div(class="col medium col-12")
+
+            div(class="form-row")
+                button(class="btn btn-primary" type="submit") Submit
