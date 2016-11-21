@@ -1,4 +1,7 @@
 form(action="/" method="post")
+
+    input(class="form-input" type="hidden" placeholder="Name" name="series" value="#{series.title}" readonly="readonly" hidden="hidden")
+
     div(class="row")
         div(class="col medium col-12")
 
@@ -127,31 +130,14 @@ form(action="/" method="post")
 
             h4 What dates?
 
-            h4: small Series Title
+            h4: small #{series.title}
 
-            div(class="form-row")
-                div(class="checkbox")
-                    label
-                        input(type="checkbox" name="dates[series-id][date-1]")
-                        | &nbsp; Date 1
-
-            div(class="form-row")
-                div(class="checkbox")
-                    label
-                        input(type="checkbox" name="dates[series-id][date-2]")
-                        | &nbsp; Date 2
-
-            div(class="form-row")
-                div(class="checkbox")
-                    label
-                        input(type="checkbox" name="dates[series-id][date-3]")
-                        | &nbsp; Date 3
-
-            div(class="form-row")
-                div(class="checkbox")
-                    label
-                        input(type="checkbox" name="dates[series-id][date-4]")
-                        | &nbsp; Date 4
+            each date in series.dates
+                div(class="form-row")
+                    div(class="checkbox")
+                        label
+                            input(type="checkbox" name="dates[#{date}]")
+                            | &nbsp; #{date}
 
     hr
 

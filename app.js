@@ -5,6 +5,8 @@
  */
 
 var express = require('express');
+var expressSession = require('express-session');
+var flash = require('express-flash');
 var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
@@ -33,7 +35,9 @@ app.set('view engine', 'jade');
 app.use(logger('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(cookieParser());
+app.use(cookieParser('keyboard cat'));
+app.use(expressSession({ cookie: { maxAge: 60000 }}));
+app.use(flash());
 app.use(require('node-sass-middleware')({
   src: path.join(__dirname, 'public'),
   dest: path.join(__dirname, 'public'),

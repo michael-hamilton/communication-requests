@@ -1,14 +1,6 @@
-var Request = require('../models/request');
+var Request = require('../../models/request');
 
 module.exports = {
-    //Renders admin page
-    render: function(req, res, next) {
-        res.render('admin/admin', {
-            title: 'Submitted Requests',
-            requests: req.requests
-        });
-    },
-
     //Gets all requests from database
     getRequests: function(req, res, next) {
         Request.find({}, function(err, requests) {
@@ -18,7 +10,7 @@ module.exports = {
     },
 
     //Gets a single request from the database with req.params._id and stores request in req.request
-    getRequest: function(req, res, next) {
+    getSingleRequest: function(req, res, next) {
         Request.findOne({_id: req.params._id}, function(err, request) {
             req.request = request;
             next();

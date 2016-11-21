@@ -1,9 +1,10 @@
 var express = require('express');
 var router = express.Router();
 var requests = require('../helpers/requests');
+var series = require('../helpers/admin/series');
 
 //Handles get requests at /
-router.get('/', requests.render);
+router.get('/', series.getActiveSeries, requests.render);
 
 //Handles post requests at /
 router.post('/', requests.validateInputs, requests.save, requests.render);

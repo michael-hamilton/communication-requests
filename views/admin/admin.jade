@@ -3,6 +3,18 @@ extends ../layout
 block content
     h1(class="text-center")= title
 
-    div(id="response-window")
+    -if(messages.success)
+        div(class="alert alert-success")= messages.success
 
-    include partials/submitted-requests-table
+    -if(messages.error)
+        div(class="alert alert-error")= messages.error
+
+    div(class="col medium col-8")
+        h3 Submitted Requests
+        include partials/submitted-requests-table
+
+    div(class="col medium col-4")
+        h3 New Series
+        include partials/add-series-form
+
+    script(src="/javascripts/admin.js")
