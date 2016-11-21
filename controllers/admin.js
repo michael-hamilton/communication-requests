@@ -7,7 +7,7 @@ var series = require('../helpers/admin/series');
 /* Request related controllers */
 
 //Handles get requests at /
-router.get('/', requests.getRequests, admin.render);
+router.get('/', requests.getRequests, series.getActiveSeries, admin.render);
 
 //Handles getting single requests by _id
 router.get('/requests/:_id', requests.getSingleRequest, requests.render);

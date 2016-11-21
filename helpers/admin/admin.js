@@ -3,7 +3,8 @@ module.exports = {
     render: function (req, res, next) {
         res.render('admin/admin', {
             title: 'Admin',
-            requests: req.requests
+            requests: req.requests,
+            activeSeries: req.activeSeries
         });
     },
 
