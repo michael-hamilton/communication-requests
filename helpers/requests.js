@@ -17,6 +17,7 @@ module.exports = {
     //Saves submission data to database
     save: function(req, res, next) {
         new Request({
+            series: req.body.series,
             user: req.body.user,
             event: req.body.event,
             mediums: req.body.mediums,

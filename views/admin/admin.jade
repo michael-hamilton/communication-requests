@@ -9,12 +9,14 @@ block content
     -if(messages.error)
         div(class="alert alert-error")= messages.error
 
-    div(class="col medium col-8")
-        h3 Submitted Requests
-        include partials/submitted-requests-table
+    div(class="row")
+        div(class="col medium col-12")
+            h3 New Series
+            include partials/add-series-form
 
-    div(class="col medium col-4")
-        h3 New Series
-        include partials/add-series-form
+    div(class="row")
+        div(class="col medium col-12")
+            h3 Submitted Requests
+            include partials/submitted-requests-table
 
     script(src="/javascripts/admin.js")

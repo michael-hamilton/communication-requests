@@ -10,11 +10,9 @@ form(action="/admin/series" method="post")
     div(id="add-series-form-dates")
         div(class="form-row series-date-field" data-date="1")
             label(class="block-label") Date
-            a(class="align-right" href="javascript:;" onclick="deleteDate(event); return false;") Delete
+            a(class="align-right delete-link" href="javascript:;" onclick="deleteDate(event); return false;") Delete
             input(class="form-input" type="text" placeholder="Enter Date" name="dates[1]")
 
     div(class="form-row")
         button(class="btn btn-default" onclick="addDate(event); return false;") Add Date
-
-    div(class="form-row")
-        button(class="btn btn-primary" type="submit") Submit
+        button(class="btn btn-primary align-right" type="submit") Submit

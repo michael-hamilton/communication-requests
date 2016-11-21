@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 
 var requestSchema = mongoose.Schema({
+    series: String,
     user: Object,
     event: Object,
     mediums: Object,
