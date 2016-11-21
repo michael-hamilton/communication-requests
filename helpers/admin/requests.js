@@ -1,6 +1,14 @@
 var Request = require('../../models/request');
 
 module.exports = {
+    //Renders single request
+    render: function (req, res, next) {
+        res.render('admin/request', {
+            title: 'Single Request',
+            request: req.request
+        });
+    },
+
     //Gets all requests from database
     getRequests: function(req, res, next) {
         Request.find({}, function(err, requests) {

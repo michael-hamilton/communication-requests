@@ -10,7 +10,7 @@ var series = require('../helpers/admin/series');
 router.get('/', requests.getRequests, admin.render);
 
 //Handles getting single requests by _id
-router.get('/requests/:_id', requests.getSingleRequest, requests.sendRequest);
+router.get('/requests/:_id', requests.getSingleRequest, requests.render);
 
 //Handles deleting a single request
 router.get('/requests/delete/:_id', requests.deleteRequest, requests.getRequests, admin.render);

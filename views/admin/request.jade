@@ -1,0 +1,49 @@
+extends ../layout
+
+block content
+    h1(class="text-center") Request from <a href="mailto:#{request.user.email_address}">#{request.user.name}</a> submitted #{moment(new Date(request.submitted)).fromNow()} for #{request.series}
+
+    div(class="row")
+        div(class="col medium col-12")
+            h3 Event Details
+
+            -if(request.event.is_event)
+                p This request is for an event.
+                p Event Title: #{request.event.title}
+                p Event Date: #{request.event.date}
+                p Event Times: #{request.event.times}
+                p Event Location: #{request.event.location}
+                p Special Requests: #{request.event.special_requests}
+
+    hr
+
+    div(class="row")
+        div(class="col medium col-12")
+            h3 Mediums
+            p App: #{request.mediums.app}
+            p Announcements: #{request.mediums.announcements}
+            p Before Mass Slides: #{request.mediums.before_mass_slides}
+            p Endnotes: #{request.mediums.endnotes}
+            p Online Campus: #{request.mediums.online_campus}
+            p Website: #{request.mediums.website}
+            p Worship Fully: #{request.mediums.worship_fully}
+            p Facebook: #{request.mediums.facebook}
+            p Instagram: #{request.mediums.instagram}
+            p Twitter: #{request.mediums.twitter}
+
+    hr
+
+    div(class="row")
+        div(class="col medium col-12")
+            h3 Dates
+            each on, date in request.dates
+                p= date
+
+    hr
+
+    div(class="row")
+        div(class="col medium col-12")
+            h3 Other Details
+            p Request Title: #{request.details.title}
+            p Target Audience: #{request.details.target}
+            p Details: #{request.details.details}
