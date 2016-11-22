@@ -14,7 +14,7 @@ module.exports = {
         Request.find({}, function(err, requests) {
             req.requests = requests;
             next();
-        });
+        }).sort({$natural:-1});
     },
 
     //Gets a single request from the database with req.params._id and stores request in req.request
