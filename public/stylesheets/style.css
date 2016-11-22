@@ -1,5 +1,20 @@
+.logo {
+  background: url("/images/churchnativity.png") no-repeat scroll 0px 0px transparent;
+  height: 100px;
+  margin: 20px auto 20px auto;
+  width: 569px; }
+
 .delete-link {
   color: red;
   text-decoration: none; }
+
+.footer {
+  background-color: #373737;
+  padding-bottom: 20px;
+  padding-top: 20px; }
+  .footer p {
+    color: white; }
+  .footer a {
+    color: #68b245; }
 
 /*# sourceMappingURL=style.css.map */

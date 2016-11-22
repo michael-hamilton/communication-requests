@@ -6,5 +6,12 @@ html
     link(rel='stylesheet', href='/stylesheets/style.css')
   body
     div(class="container")
+      div(class="logo")
       block content
-      script(src='/bower_components/jquery/dist/jquery.js')
+
+    div(class="footer")
+      div(class="container")
+        p(class="footer-copyright"): span(onclick="jQuery('#attribution').fadeToggle();") © 2016 <a href="http://churchnativity.com">Church of the Nativity</a>
+        p(id="attribution" style="display:none;") Hand crafted with love by <a href="http://miska.me">Michael Hamilton</a>
+
+    script(src='/bower_components/jquery/dist/jquery.js')
