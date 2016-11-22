@@ -7,6 +7,6 @@ var series = require('../helpers/admin/series');
 router.get('/', series.getActiveSeries, requests.render);
 
 //Handles post requests at /
-router.post('/', requests.validateInputs, requests.save, requests.render);
+router.post('/', requests.validateInputs, requests.save, series.getActiveSeries, requests.render);
 
 module.exports = router;

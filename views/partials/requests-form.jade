@@ -7,13 +7,13 @@ form(action="/" method="post")
 
             h4 Who are you?
 
-            div(class="form-row")
+            div(class="form-row required")
                 label Name
-                input(class="form-input" type="text" placeholder="Name" name="user[name]")
+                input(class="form-input" type="text" placeholder="Name" name="user[name]" required="required")
 
-            div(class="form-row")
+            div(class="form-row required")
                 label Email Address
-                input(class="form-input" type="text" placeholder="Email Address" name="user[email_address]")
+                input(class="form-input" type="text" placeholder="Email Address" name="user[email_address]" required="required")
 
     hr
 
@@ -146,13 +146,13 @@ form(action="/" method="post")
 
             h4 Who and what?
 
-            div(class="form-row")
+            div(class="form-row required")
                 label What are you calling this?
-                input(class="form-input" type="text" placeholder="Title" name="details[title]")
+                input(class="form-input" type="text" placeholder="Title" name="details[title]" required="required")
 
-            div(class="form-row")
+            div(class="form-row required")
                 label Who is your target audience?
-                input(class="form-input" type="text" placeholder="Target Audience" name="details[target]")
+                input(class="form-input" type="text" placeholder="Target Audience" name="details[target]" required="required")
 
             div(class="form-row")
                 label Any other details we need to know?

@@ -25,6 +25,7 @@ module.exports = {
             details: req.body.details
         }).save(function(err, request) {
             if(err) new Error("Error saving request");
+            req.flash('success', 'Your communication request was successfully sent!');
             next();
         });
     }

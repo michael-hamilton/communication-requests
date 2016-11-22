@@ -2,4 +2,7 @@ extends layout
 
 block content
   h1(class="text-center")= title
+  -if(messages.success)
+    div(class="alert alert-success")= messages.success
+
   include partials/requests-form
