@@ -1,7 +1,7 @@
 extends ../layout
 
 block content
-    h1(class="text-center") Request from <a href="mailto:#{request.user.email_address}">#{request.user.name}</a> submitted #{moment(new Date(request.submitted)).fromNow()} for #{request.series}
+    h1(class="text-center") Request from <a href="mailto:#{request.user.email_address}">#{request.user.name}</a> submitted #{moment(new Date(request.submitted)).fromNow()} for series #{request.series}
 
     div(class="row")
         div(class="col medium col-12")
@@ -14,6 +14,8 @@ block content
                 p Event Times: #{request.event.times}
                 p Event Location: #{request.event.location}
                 p Special Requests: #{request.event.special_requests}
+            -else
+                p: i This request is not for an event
 
     hr
 
@@ -36,8 +38,11 @@ block content
     div(class="row")
         div(class="col medium col-12")
             h3 Dates
-            each on, date in request.dates
-                p= date
+            -if(request.dates)
+                each on, date in request.dates
+                    p= date
+            -else
+                p: i No dates were submitted with this request
 
     hr
 
